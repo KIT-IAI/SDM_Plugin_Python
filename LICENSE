@@ -1,3 +1,11 @@
+The software is licensed under MIT license
+
+Copyright 2023, Copyright Owner: Karlsruhe Institute of Technology (KIT)  
+Author: Andreas Geiger, Steffen Hempel  
+Contact: andreas.geiger@kit.edu, Institute for Automation and Applied Informatics  
+
+---
+
 MIT License
 
 Copyright (c) 2023 Institute for Automation and Applied Informatics

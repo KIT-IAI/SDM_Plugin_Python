@@ -1,3 +1,13 @@
+# Dependencies
+
+## Use of vcpkg:
+
+|Package Name         |Install Command                            |
+|:---                 |:---                                       |
+|python3              |vcpkg install python3 triplet=x64-windows  |
+|catch2               |vcpkg install catch2 triplet=x64-windows   |
+
+
 # Python Interface
 
 ## User Interface

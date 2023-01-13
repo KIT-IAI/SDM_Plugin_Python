@@ -17,7 +17,7 @@
 The integration of own Python scripts is done via the file "scripts/setup.py". 
 The "register" function from the "plugin" module is used to link a menu item to a Python script.
 
-####### <u>Example setup.py:</u>
+<u>Example setup.py:</u>
 ```
 import plugin
 

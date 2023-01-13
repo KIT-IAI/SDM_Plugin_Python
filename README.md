@@ -1,6 +1,8 @@
-# Dependencies
+# Pyhon PlugIn
 
-## Use of vcpkg:
+## Dependencies
+
+### Use of vcpkg:
 
 |Package Name         |Install Command                            |
 |:---                 |:---                                       |
@@ -8,14 +10,14 @@
 |catch2               |vcpkg install catch2 triplet=x64-windows   |
 
 
-# Python Interface
+## Python Interface
 
-## User Interface
+### User Interface
   
 The integration of own Python scripts is done via the file "scripts/setup.py". 
 The "register" function from the "plugin" module is used to link a menu item to a Python script.
 
-###### <u>Example setup.py:</u>
+####### <u>Example setup.py:</u>
 ```
 import plugin
 
@@ -27,7 +29,7 @@ plugin.register("Get CityGML Building Function", ifcdb_query.queryCityGMLBuildin
 plugin.register("Create Feature test", ifcdb_query.createFeature)  
 ```
 
-## Entity: Attributes
+### Entity: Attributes
 
 |Attribute              |Description                    |Type     |
 |:---                   |:---                           |:---     |
@@ -42,7 +44,7 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |color [set; get]       |Entity color as list<br> [red, green, blue, alpha]|integer list|
 |long_name [set; get]   |IFC spezific attribute for e.g. spaces|string|
 
-## Entity: Methods
+### Entity: Methods
 
 |Method                                 |Description                      |
 |:---                                   |:---                             |
@@ -53,7 +55,7 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |set_parent(parentOid)                  |Sets the parent-child relationship of the current entity. The OID of the parent entity is passed |
 |find_property_value(propertySet, propertyName) |Returns the value as sting for the passed property set and property name (e.g. "Pset_WallCommon", "ThermalTransmittance") |
 
-## Document: Methods
+### Document: Methods
 
 |Method                                 |Description                      |
 |:---                                   |:---                             |
@@ -62,7 +64,7 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |create_entity(entityType)              |Crates a new entity, entity typ is passed |
 |log_message(message)                   |Creates a new entry in the log window |
 
-## Geometry Structure
+### Geometry Structure
 
 * Point   
 2D [x,y] or 3D [x,y,z] cordinate tupel

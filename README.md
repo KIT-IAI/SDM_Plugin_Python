@@ -63,6 +63,7 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |create_feature(gmlID, featureType)     |Creates a new feature, GML ID and feature type is passed |
 |create_entity(entityType)              |Crates a new entity, entity typ is passed |
 |log_message(message)                   |Creates a new entry in the log window |
+|update()                               |Sends an update notification to the application to prepare geometries and and OpenGL szene. this method should be called only when needed (creation of entities and geometries). If multiple entities or geometries are created, use only once at the end. |
 
 ### Geometry Structure
 

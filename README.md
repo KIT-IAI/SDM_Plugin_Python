@@ -73,5 +73,5 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 List of points [ [x,y], [x,y], [x,y], [x,y] ]
 
 * Polygon / Fläche  
-List of points. If several lists are passed, the first list is interpreted as an ${\color{blue}outer}$ ${\color{blue}contour}$ and all further lists are ${\color{green}inner}$ ${\color{blue}contour}$
-<span style="color:blue">[ [x,y], [x,y], [x,y], [x,y] ]</span>, <span style="color:green">[ [x,y], [x,y], [x,y], [x,y] ]</span>, <span style="color:green">[ [x,y], [x,y], [x,y], [x,y] ]</span>
+List of points. If several lists are passed, the first list is interpreted as an ${\color{blue}outer}$ ${\color{blue}contour}$ and all further lists are ${\color{green}inner}$ ${\color{green}contours}$
+${\color{blue}[ [x,y], [x,y], [x,y], [x,y] ]}$ ${\color{green}[ [x,y], [x,y], [x,y], [x,y] ] [ [x,y], [x,y], [x,y], [x,y] ]}$

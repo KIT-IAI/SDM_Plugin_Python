@@ -62,7 +62,7 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |get_entities()                         |Returns a list of all Entities   |
 |create_feature(gmlID, featureType)     |Creates a new feature, GML ID and feature type is passed |
 |create_entity(entityType)              |Crates a new entity, entity typ is passed |
-|log_message(message)                   |Creates a new entry in the log window |
+|log_message(message)                   |Creates a new entry in the live log window |
 
 ### Geometry Structure
 

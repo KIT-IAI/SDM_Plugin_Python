@@ -69,6 +69,16 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |get_model_type()                       |Returns the the model / format / service type for the object |
 |get_model_info()                       |Returns the model information details |
 
+### Geometry: Attributes
+
+|Attribute              |Description                    |Type     |
+|:---                   |:---                           |:---     |
+
+### Geometry: Methods
+
+|Method                                 |Description                      |
+|:---                                   |:---                             |
+
 ### Geometry Structure
 
 * Point   

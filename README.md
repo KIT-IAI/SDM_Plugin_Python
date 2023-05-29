@@ -29,6 +29,16 @@ plugin.register("Get CityGML Building Function", ifcdb_query.queryCityGMLBuildin
 plugin.register("Create Feature test", ifcdb_query.createFeature)  
 ```
 
+### Document: Methods
+
+|Method                                 |Description                      |
+|:---                                   |:---                             |
+|get_entities()                         |Returns a list of all Entities   |
+|create_feature(gmlID, featureType)     |Creates a new feature, GML ID and feature type is passed |
+|create_entity(entityType)              |Crates a new entity, entity typ is passed |
+|log_message(message)                   |Creates a new entry in the live log window |
+|srs_transform(coordinates, sourceSrs, targetSrs) |Transforms the coordinates of a point (see point definition below), sourceSrs and targetSrs are specified by the EPSG code as string|
+
 ### Entity: Attributes
 
 |Attribute              |Description                    |Type     |
@@ -58,18 +68,6 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |get_geometry_info()                    |Returns the geometry structure assigned to the object |
 |get_model_type()                       |Returns the the model / format / service type for the object |
 |get_model_info()                       |Returns the model information details |
-
-
-### Document: Methods
-
-|Method                                 |Description                      |
-|:---                                   |:---                             |
-|get_entities()                         |Returns a list of all Entities   |
-|create_feature(gmlID, featureType)     |Creates a new feature, GML ID and feature type is passed |
-|create_entity(entityType)              |Crates a new entity, entity typ is passed |
-|log_message(message)                   |Creates a new entry in the live log window |
-|srs_transform(coordinates, sourceSrs, targetSrs) |Transforms the coordinates of a point (see point definition below), sourceSrs and targetSrs are specified by the EPSG code as string|
-
 
 ### Geometry Structure
 

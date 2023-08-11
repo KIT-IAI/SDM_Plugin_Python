@@ -34,10 +34,13 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |Method                                 |Description                      |
 |:---                                   |:---                             |
 |get_entities()                         |Returns a list of all Entities   |
+|get_entities_by_type(type)             |Returns a list containing all entities of the specified type  |
+|get_entity_by_oid(oid)                 |Returna the entity with the given OID |
 |create_feature(gmlID, featureType)     |Creates a new feature, GML ID and feature type is passed |
 |create_entity(entityType)              |Crates a new entity, entity typ is passed |
 |log_message(message)                   |Creates a new entry in the live log window |
 |srs_transform(coordinates, sourceSrs, targetSrs) |Transforms the coordinates of a point (see point definition below), sourceSrs and targetSrs are specified by the EPSG code as string|
+|get_selected_entities()                |Returns a list of selected entities |
 
 ### Entity: Attributes
 
@@ -64,7 +67,6 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |calc_quantities()                      |Calculates geometric parameters like volume, center of gravity, extension, ... and provides them in a dictionary |
 |set_parent(parentOid)                  |Sets the parent-child relationship of the current entity. The OID of the parent entity is passed |
 |find_property_value(propertySet, propertyName) |Returns the value as sting for the passed property set and property name (e.g. "Pset_WallCommon", "ThermalTransmittance") |
-|get_geometry_type()                    |Returns the geometry type assigned to the object |
 |get_geometry_info()                    |Returns the geometry structure assigned to the object |
 |get_model_type()                       |Returns the the model / format / service type for the object |
 |get_model_info()                       |Returns the model information details |
@@ -73,6 +75,7 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 
 |Attribute              |Description                    |Type     |
 |:---                   |:---                           |:---     |
+|type [get]             | Geometry type                 |string   |
 
 ### Geometry: Methods
 

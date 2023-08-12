@@ -68,6 +68,7 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |calc_quantities()                      |Calculates geometric parameters like volume, center of gravity, extension, ... and provides them in a dictionary |
 |set_parent(parentOid)                  |Sets the parent-child relationship of the current entity. The OID of the parent entity is passed |
 |find_property_value(propertySet, propertyName) |Returns the value as sting for the passed property set and property name (e.g. "Pset_WallCommon", "ThermalTransmittance") |
+|get_properties()                       |Returns a dictionary structur containing all properties related by IfcRelDefinesByProperty |
 |get_geometry_info()                    |Returns the geometry structure assigned to the object |
 |get_model_type()                       |Returns the the model / format / service type for the object |
 |get_model_info()                       |Returns the model information details |

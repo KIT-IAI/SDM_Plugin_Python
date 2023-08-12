@@ -41,6 +41,7 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |log_message(message)                   |Creates a new entry in the live log window |
 |srs_transform(coordinates, sourceSrs, targetSrs) |Transforms the coordinates of a point (see point definition below), sourceSrs and targetSrs are specified by the EPSG code as string|
 |get_selected_entities()                |Returns a list of selected entities |
+|get_visible_entities()                 |Returns a list of visible entities |
 
 ### Entity: Attributes
 

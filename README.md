@@ -35,7 +35,7 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |:---                                   |:---                             |
 |get_entities()                         |Returns a list of all Entities   |
 |get_entities_by_type(type)             |Returns a list containing all entities of the specified type  |
-|get_entity_by_oid(oid)                 |Returna the entity with the given OID |
+|get_entity_by_oid(oid)                 |Returns the entity with the given OID |
 |create_feature(gmlID, featureType)     |Creates a new feature, GML ID and feature type is passed |
 |create_entity(entityType)              |Crates a new entity, entity typ is passed |
 |log_message(message)                   |Creates a new entry in the live log window |

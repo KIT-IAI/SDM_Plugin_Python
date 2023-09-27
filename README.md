@@ -73,6 +73,20 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |get_model_type()                       |Returns the the model / format / service type for the object |
 |get_model_info()                       |Returns the model information details |
 
+### EntityType: Attributes
+
+|Attribute              |Description                    |Type     |
+|:---                   |:---                           |:---     |
+|oid [get]              |Objekt ID                      |integer  |
+|guid [get]             |Global unique ID               |string   |
+|name [set; get]        |Name                           |string   |
+|description [set; get] |Description                    |string   |
+
+### EntityType: Methods
+
+|Method                                 |Description                      |
+|:---                                   |:---                             |
+
 ### Relation: Attributes
 
 |Attribute              |Description                    |Type     |

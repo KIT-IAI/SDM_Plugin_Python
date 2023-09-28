@@ -33,8 +33,8 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 
 |Method                                 |Description                      |
 |:---                                   |:---                             |
-|get_entities()                         |Returns a list of all Entities   |
-|get_entities_by_type(type)             |Returns a list containing all entities of the specified type  |
+|get_entities()                         |Returns a list of all Entities |
+|get_entities_by_type(type)             |Returns a list of all entities of the specified type |
 |get_entity_by_oid(oid)                 |Returns the entity with the given OID |
 |create_feature(gmlID, featureType)     |Creates a new feature, GML ID and feature type is passed |
 |create_entity(entityType)              |Crates a new entity, entity typ is passed |
@@ -69,6 +69,7 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |set_parent(parentOid)                  |Sets the parent-child relationship of the current entity. The OID of the parent entity is passed |
 |find_property_value(propertySet, propertyName) |Returns the value as sting for the passed property set and property name (e.g. "Pset_WallCommon", "ThermalTransmittance") |
 |get_properties()                       |Returns a dictionary structur containing all properties related by IfcRelDefinesByProperty |
+|get_relations(relationType='')         |Returns a list of all or the specified relations |
 |get_geometry_info()                    |Returns the geometry structure assigned to the object |
 |get_model_type()                       |Returns the the model / format / service type for the object |
 |get_model_info()                       |Returns the model information details |
@@ -86,6 +87,8 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 
 |Method                                 |Description                      |
 |:---                                   |:---                             |
+|get_properties()                       |Returns a dictionary structur containing all properties related by IfcRelDefinesByProperty |
+|get_relations(relationType='')         |Returns a list of all or the specified relations |
 
 ### Relation: Attributes
 

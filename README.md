@@ -69,6 +69,7 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |set_parent(parentOid)                  |Sets the parent-child relationship of the current entity. The OID of the parent entity is passed |
 |find_property_value(propertySet, propertyName) |Returns the value as sting for the passed property set and property name (e.g. "Pset_WallCommon", "ThermalTransmittance") |
 |get_properties()                       |Returns a dictionary structur containing all properties related by IfcRelDefinesByProperty |
+|get_type_object()                      |Returns the IfcTypeObject releted by IfcRelDefinesByType |
 |get_relations(relationType='')         |Returns a list of all relations or the specified relation type only |
 |get_geometry_info()                    |Returns the geometry structure assigned to the object |
 |get_model_type()                       |Returns the the model / format / service type for the object |

@@ -128,3 +128,15 @@ List of points [ [x,y], [x,y], [x,y], [x,y] ]
 * Polygon / Face  
 List of points. If several lists are passed, the first list is interpreted as an ${\color{blue}outer}$ ${\color{blue}contour}$ and all further lists are ${\color{green}inner}$ ${\color{green}contours}$
 ${\color{blue}[ [x,y], [x,y], [x,y], [x,y] ]}$ ${\color{green}[ [x,y], [x,y], [x,y], [x,y] ] [ [x,y], [x,y], [x,y], [x,y] ]}$
+
+### How to cite:
+
+```bibtex
+@software{SDM_Plugin_Python,
+	title        = {SDM_Plugin_Python},
+	author       = {{Steffen Hempel, Andreas Geiger}},
+	url          = {https://github.com/KIT-IAI/SDM_Plugin_Python},
+	date         = {2023}
+}
+```
+

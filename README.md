@@ -162,7 +162,7 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |:---                                   |:---                             |
 |is_closed                              |Check weather the first and last point are the same |
 |is_within(coordinate)                  |Checks whether a point is located within the polyline (see [point definition](#geometry-structures) below) |
-|intersects                             |checks whether a polyline intersects with an other polyline |
+|intersects_with(polyline)              |checks whether a polyline intersects with an other polyline |
 |get_coordinates                        |Returns a list containing the coordinates (see [Geometry Structures](#geometry-structures) definition below) |
 
 ### Geometry Structures

@@ -79,8 +79,8 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |calc_quantities()                      |Calculates geometric parameters like volume, center of gravity, extension, ... and provides them in a dictionary |
 |add_string_attribute()                 |Add new string attribute |
 |add_date_attribute()                   |Add new data attribute |
-|add_geometry_polyline(coordinates)     |A polyline is generated from a passed list of coordinate values (see [Geometry Structure](#geometry-structures) below) |
-|add_geometry_polygon(coordinates)      |A polygon (face) is generated from a passed list of coordinate values (see [Geometry Structure](#geometry-structures) below)|
+|add_geometry_polyline(coordinates)     |A polyline is generated from a passed list of coordinate values (see [Geometry Structures](#geometry-structures) below) |
+|add_geometry_polygon(coordinates)      |A polygon (face) is generated from a passed list of coordinate values (see [Geometry Structures](#geometry-structures) below)|
 |is_point_within(coordinates)           |Checks whether a point is located within the projected geometry (see [point definition](#geometry-structures) below) |
 
 ### EntityType: Attributes
@@ -143,7 +143,9 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |Method                                 |Description                      |
 |:---                                   |:---                             |
 |get_normal                             |Returns the face normal |
-|get_polygons                           |Returns a list structure containing the coordinates (see [Geometry Structure](#geometry-structures) definition below) |
+|get_polygons                           |Returns a list structure containing the coordinates (see [Geometry Structures](#geometry-structures) definition below) |
+|get_outer_loop                         |Returns a list structure containing the coordinates of the outerr loop (see [Geometry Structures](#geometry-structures) definition below) |
+|get_inner_loops                        |Returns a list structure containing the coordinates of the inner loops (see [Geometry Structures](#geometry-structures) definition below) |
 |calc_area                              |Returns the area value of the face geometry |
 |is_within(coordinate)                  |Checks whether a point is located within the face contour (see [point definition](#geometry-structures) below) |
 

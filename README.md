@@ -39,7 +39,7 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |create_feature(gmlID, featureType)     |Creates a new feature, GML ID and feature type is passed |
 |create_entity(entityType)              |Crates a new entity, entity typ is passed |
 |log_message(message)                   |Creates a new entry in the live log window |
-|srs_transform(coordinates, sourceSrs, targetSrs) |Transforms the coordinates of a point (see [point definition](#geometry-structure) below), sourceSrs and targetSrs are specified by the EPSG code as string|
+|srs_transform(coordinates, sourceSrs, targetSrs) |Transforms the coordinates of a point (see [point definition](#geometry-structures) below), sourceSrs and targetSrs are specified by the EPSG code as string|
 |get_selected_entities()                |Returns a list of selected entities |
 |get_visible_entities()                 |Returns a list of visible entities |
 |get_data_path()                        |Returns the path to the current data |
@@ -79,9 +79,9 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |calc_quantities()                      |Calculates geometric parameters like volume, center of gravity, extension, ... and provides them in a dictionary |
 |add_string_attribute()                 |Add new string attribute |
 |add_date_attribute()                   |Add new data attribute |
-|add_geometry_polyline(coordinates)     |A polyline is generated from a passed list of coordinate values (see [Geometry Structure](#geometry-structure) below) |
-|add_geometry_polygon(coordinates)      |A polygon (face) is generated from a passed list of coordinate values (see [Geometry Structure](#geometry-structure) below)|
-|is_point_within(coordinates)           |Checks whether a point is located within the projected geometry (see [point definition](#geometry-structure) below) |
+|add_geometry_polyline(coordinates)     |A polyline is generated from a passed list of coordinate values (see [Geometry Structure](#geometry-structures) below) |
+|add_geometry_polygon(coordinates)      |A polygon (face) is generated from a passed list of coordinate values (see [Geometry Structure](#geometry-structures) below)|
+|is_point_within(coordinates)           |Checks whether a point is located within the projected geometry (see [point definition](#geometry-structures) below) |
 
 ### EntityType: Attributes
 
@@ -131,7 +131,7 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |:---                                   |:---                             |
 |get_faces                              |Returns a list of face objects |
 |srs_transform(ourceSrs, targetSrs)     |Transforms the geometry, sourceSrs and targetSrs are specified by the EPSG code as string|
-|is_within(coordinate)                  |Checks whether a point is located within the projected geometry (see [point definition](#geometry-structure) below) |
+|is_within(coordinate)                  |Checks whether a point is located within the projected geometry (see [point definition](#geometry-structures) below) |
 
 ### Face: Attributes
 
@@ -143,9 +143,9 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |Method                                 |Description                      |
 |:---                                   |:---                             |
 |get_normal                             |Returns the face normal |
-|get_polygons                           |Returns a list structure containing the coordinates (see [Geometry Structure](#geometry-structure) definition below) |
+|get_polygons                           |Returns a list structure containing the coordinates (see [Geometry Structure](#geometry-structures) definition below) |
 |calc_area                              |Returns the area value of the face geometry |
-|is_within(coordinate)                  |Checks whether a point is located within the face contour (see [point definition](#geometry-structure) below) |
+|is_within(coordinate)                  |Checks whether a point is located within the face contour (see [point definition](#geometry-structures) below) |
 
 ### Geometry Structures
 

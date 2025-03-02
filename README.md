@@ -144,8 +144,10 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |:---                                   |:---                             |
 |get_normal                             |Returns the face normal |
 |get_polygons                           |Returns a list structure containing the coordinates (see [Geometry Structures](#geometry-structures) definition below) |
-|get_outer_loop                         |Returns a list structure containing the coordinates of the outerr loop (see [Geometry Structures](#geometry-structures) definition below) |
-|get_inner_loops                        |Returns a list structure containing the coordinates of the inner loops (see [Geometry Structures](#geometry-structures) definition below) |
+|get_outer_loop                         |Returns the outer loop as a polyline object |
+|get_outer_loop_coordinates             |Returns a list structure containing the coordinates of the outerr loop (see [Geometry Structures](#geometry-structures) definition below) |
+|get_inner_loops                        |Returns the inner loops as a list of polyline objects  |
+|get_inner_loops_coordinates            |Returns a list structure containing the coordinates of the inner loops (see [Geometry Structures](#geometry-structures) definition below) |
 |calc_area                              |Returns the area value of the face geometry |
 |is_within(coordinate)                  |Checks whether a point is located within the face contour (see [point definition](#geometry-structures) below) |
 

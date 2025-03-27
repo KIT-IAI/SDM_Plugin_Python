@@ -20,13 +20,12 @@ The "register" function from the "plugin" module is used to link a menu item to 
 <u>Example setup.py:</u>
 ```
 import plugin
-
 import ifcdb_query
 
-plugin.register("Get Entities", ifcdb_query.queryEntities)  
-plugin.register("Get CityGML Buildings", ifcdb_query.queryCityGMLBuildings)  
-plugin.register("Get CityGML Building Function", ifcdb_query.queryCityGMLBuildingFunction)  
-plugin.register("Create Feature test", ifcdb_query.createFeature)  
+plugin.register("Get Entities", "", ifcdb_query.queryEntities)  
+plugin.register("Get CityGML Buildings", "", ifcdb_query.queryCityGMLBuildings)  
+plugin.register("Get CityGML Building Function", "", ifcdb_query.queryCityGMLBuildingFunction)  
+plugin.register("Create Feature test", "", ifcdb_query.createFeature)  
 ```
 
 ### Document: Methods

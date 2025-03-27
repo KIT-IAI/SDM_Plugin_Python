@@ -44,6 +44,7 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |get_visible_entities()                 |Returns a list of visible entities |
 |get_data_path()                        |Returns the path to the current data |
 |get_script_path()                      |Returns the path to the current Python script|
+|get_latlon_boundingbox()               |Returns the model bounding box in latitude / longitude|
 
 ### Entity: Attributes
 
@@ -82,6 +83,7 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |add_geometry_polyline(coordinates)     |A polyline is generated from a passed list of coordinate values (see [Geometry Structures](#geometry-structures) below) |
 |add_geometry_polygon(coordinates)      |A polygon (face) is generated from a passed list of coordinate values (see [Geometry Structures](#geometry-structures) below)|
 |is_point_within(coordinates)           |Checks whether a point is located within the projected geometry (see [point definition](#geometry-structures) below) |
+|get_boundingbox()                      |Returns the bounding box of the entity|
 
 ### EntityType: Attributes
 
@@ -132,6 +134,7 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |get_faces                              |Returns a list of face objects |
 |srs_transform(ourceSrs, targetSrs)     |Transforms the geometry, sourceSrs and targetSrs are specified by the EPSG code as string|
 |is_within(coordinate)                  |Checks whether a point is located within the projected geometry (see [point definition](#geometry-structures) below) |
+|get_boundingbox()                      |Returns the bounding box of the geometry|
 
 ### Face: Attributes
 

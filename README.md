@@ -44,7 +44,7 @@ plugin.register("Create Feature test", ifcdb_query.createFeature)
 |get_visible_entities()                 |Returns a list of visible entities |
 |get_data_path()                        |Returns the path to the current data |
 |get_script_path()                      |Returns the path to the current Python script|
-|get_latlon_boundingbox()               |Returns the model bounding box in latitude / longitude|
+|get_latlon_boundingbox()               |Returns the model bounding box in latitude / longitude (see [point definition](#geometry-structures))|
 
 ### Entity: Attributes
 

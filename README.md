@@ -83,6 +83,8 @@ plugin.register("Create Feature test", "", ifcdb_query.createFeature)
 |add_geometry_polygon(coordinates)      |A polygon (face) is generated from a passed list of coordinate values (see [Geometry Structures](#geometry-structures) below)|
 |is_point_within(coordinates)           |Checks whether a point is located within the projected geometry (see [point definition](#geometry-structures) below) |
 |get_boundingbox()                      |Returns the bounding box of the entity|
+|get_children()                         |Returns a list of children |
+|get_children_by_type(type)             |Returns a list of children of the specified type |
 
 ### EntityType: Attributes
 

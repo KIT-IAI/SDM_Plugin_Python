@@ -38,11 +38,13 @@ plugin.register("Create Feature test", "", ifcdb_query.createFeature)
 |create_feature(gmlID, featureType)     |Creates a new feature, GML ID and feature type is passed |
 |create_entity(entityType)              |Crates a new entity, entity typ is passed |
 |log_message(message)                   |Creates a new entry in the live log window |
-|srs_transform(coordinates, sourceSrs, targetSrs) |Transforms the coordinates of a point (see [point definition](#geometry-structures) below), sourceSrs and targetSrs are specified by the EPSG code as string|
+|srs_transform(coordinates, sourceSrs, targetSrs) |Transforms the coordinates of a point (see [point definition](#geometry-structures) below), sourceSrs and targetSrs are specified by the EPSG code as string |
 |get_selected_entities()                |Returns a list of selected entities |
 |get_visible_entities()                 |Returns a list of visible entities |
-|get_data_path()                        |Returns the path to the current data |
-|get_script_path()                      |Returns the path to the current Python script|
+|get_data_path()                        |Returns the path to the application data folder |
+|get_script_path()                      |Returns the path to the current Python script |
+|get_file_path()                        |Returns the path to the currently loaded file |
+
 |get_latlon_boundingbox()               |Returns the model bounding box in latitude / longitude (see [point definition](#geometry-structures))|
 
 ### Entity: Attributes

@@ -45,6 +45,8 @@ plugin.register("Create Feature test", "", ifcdb_query.createFeature)
 |get_script_path()                      |Returns the path to the current Python script |
 |get_file_path()                        |Returns the path to the currently loaded file |
 |get_latlon_boundingbox()               |Returns the model bounding box in latitude / longitude (see [point definition](#geometry-structures))|
+|get_reference_point()               	|Returns the coordinates of the model reference point according to the EPSG of the default SRS (see [point definition](#geometry-structures))|
+|get_default_srs()               	|Returns the EPSG code of the default SRS|
 
 ### Entity: Attributes
 

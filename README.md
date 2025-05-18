@@ -32,6 +32,7 @@ plugin.register("Create Feature test", "", ifcdb_query.createFeature)
 
 |Method                                 |Description                      |
 |:---                                   |:---                             |
+|load_data(filename)                    |Load data from a file (if the file format is supported) |
 |get_entities()                         |Returns a list of all Entities |
 |get_entities_by_type(type)             |Returns a list of all entities of the specified type |
 |get_entity_by_oid(oid)                 |Returns the entity with the given OID |

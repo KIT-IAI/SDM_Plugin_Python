@@ -1,4 +1,4 @@
-# Pyhon PlugIn
+# Pyhon Plugin
 
 ## Dependencies
 

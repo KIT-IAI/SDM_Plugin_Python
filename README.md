@@ -6,10 +6,11 @@ To be able to create the Python plugin, the [plugin SDK](https://github.com/KIT-
 
 ### Use of vcpkg:
 
-|Package Name         |Install Command                            |
-|:---                 |:---                                       |
-|python3              |vcpkg install python3 triplet=x64-windows  |
-|catch2               |vcpkg install catch2 triplet=x64-windows   |
+|Package Name         |Install Command                             |
+|:---                 |:---                                        |
+|python3              |vcpkg install python3 triplet=x64-windows   |
+|wxwidgets            |vcpkg install wxwidgets triplet=x64-windows |
+|fmt                  |vcpkg install fmt triplet=x64-windows       |
 
 
 ## Python Interface

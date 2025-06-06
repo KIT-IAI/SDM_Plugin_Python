@@ -1,5 +1,7 @@
 # Pyhon Plugin
 
+To be able to create the Python plugin, the [plugin SDK](https://github.com/KIT-IAI/SDM_Plugin_SDK) is also required. Simply copy the content of the current SDK version into the "ifcexplorer_python3" folder.
+
 ## Dependencies
 
 ### Use of vcpkg:
@@ -22,10 +24,9 @@ The "register" function from the "plugin" module is used to link a menu item to 
 import plugin
 import ifcdb_query
 
-plugin.register("Get Entities", "", ifcdb_query.queryEntities)  
-plugin.register("Get CityGML Buildings", "", ifcdb_query.queryCityGMLBuildings)  
-plugin.register("Get CityGML Building Function", "", ifcdb_query.queryCityGMLBuildingFunction)  
-plugin.register("Create Feature test", "", ifcdb_query.createFeature)  
+plugin.register("Get entity info for all entities", "", ifcdb_query.query_entities)
+plugin.register("Get entity info of selected entities", "", ifcdb_query.query_selected_entities)
+plugin.register("Get entity info of visible entities", "", ifcdb_query.query_visible_entities)
 ```
 
 ### Document: Methods

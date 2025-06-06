@@ -2,8 +2,8 @@
 
 #include "ActionFeatureHelper.hpp"
 #include "PythonPluginManifest.hpp"
-#include "Population.h"
-#include "utils/PopulationObserver.hpp"
+#include <ifcdb/Population.h>
+#include <ifcdb/utils/PopulationObserver.hpp>
 #include "LiveLogFeature.hpp"
 #include "AppFeatureHelper.hpp"
 #include "IfcDBState.hpp"

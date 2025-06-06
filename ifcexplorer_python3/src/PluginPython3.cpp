@@ -6,7 +6,7 @@
 #include "ModuleDocument.hpp"
 #include "PluginState.hpp"
 #include "Interpreter.hpp"
-#include "IFCDBInterfaceVersion.hpp"
+#include <ifcdb/IFCDBInterfaceVersion.hpp>
 #include "PluginInterfaceVersion.hpp"
 #include "ComponentRegistry.hpp"
 #include "PythonPluginManifest.hpp"

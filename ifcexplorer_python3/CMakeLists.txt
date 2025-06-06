@@ -69,6 +69,9 @@ else()
     MESSAGE( STATUS "CMAKE_BUILD_TYPE not set yet ${CMAKE_BUILD_TYPE}" )
 endif()
 
+target_include_directories(ifcexplorer_python3 PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_link_directories(ifcexplorer_python3 PRIVATE ${CMAKE_SOURCE_DIR}/lib)
+
 target_link_libraries(ifcexplorer_python3 PRIVATE Python3::Python)
 target_link_libraries(ifcexplorer_python3 PRIVATE wx::core wx::base)
 target_compile_features(ifcexplorer_python3 PRIVATE cxx_std_17)

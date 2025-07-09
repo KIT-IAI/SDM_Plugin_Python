@@ -35,6 +35,7 @@ plugin.register("Get entity info of visible entities", "", ifcdb_query.query_vis
 |Method                                 |Description                      |
 |:---                                   |:---                             |
 |load_data(filename)                    |Load data from a file (if the file format is supported) |
+|get_application_settings()             |Returns a dictionary containing application specific settings |
 |get_entities()                         |Returns a list of all Entities |
 |get_entities_by_type(type)             |Returns a list of all entities of the specified type |
 |get_entity_by_oid(oid)                 |Returns the entity with the given OID |

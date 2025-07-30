@@ -1,5 +1,6 @@
 # Pyhon Plugin
 
+The [KITModelViewer](https://github.com/KIT-IAI/SDM_KITModelViewer) Python API is based on the open [plugin interface](https://github.com/KIT-IAI/SDM_Plugin_SDK).
 To be able to create the Python plugin, the [plugin SDK](https://github.com/KIT-IAI/SDM_Plugin_SDK) is also required. Simply copy the content of the current SDK version into the "ifcexplorer_python3" folder.
 
 ## Dependencies

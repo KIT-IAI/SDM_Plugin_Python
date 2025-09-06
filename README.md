@@ -186,8 +186,8 @@ plugin.register("Get entity info of visible entities", "", ifcdb_query.query_vis
 List of points [ [x,y], [x,y], [x,y], [x,y] ]
 
 * Polygon / Face  
-List of points. If several lists are passed, the first list is interpreted as an ${\color{blue}outer}$ ${\color{blue}contour}$ and all further lists are ${\color{green}inner \space contours}$.<br>
-[ ${\color{blue}[ \space [x,y], [x,y], [x,y], [x,y] \space ]}$, ${\color{green}[ \space [x,y], [x,y], [x,y], [x,y] \space ], [ \space [x,y], [x,y], [x,y], [x,y] \space ]}$ ]
+List of points. If several lists are passed, the first list is interpreted as an ${\color{blue}outer \space contour}$ and all further lists are ${\color{green}inner \space contours}$.<br>
+[ ${\color{blue}[ \space [x,y], [x,y], [x,y], [x,y] \space ], \color{green}[ \space [x,y], [x,y], [x,y], [x,y] \space ], [ \space [x,y], [x,y], [x,y], [x,y] \space ]}$ ]
 
 ## How to cite
 
@@ -199,6 +199,7 @@ List of points. If several lists are passed, the first list is interpreted as an
 	date         = {2023}
 }
 ```
+
 
 
 

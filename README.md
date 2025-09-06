@@ -187,7 +187,7 @@ List of points [ [x,y], [x,y], [x,y], [x,y] ]
 
 * Polygon / Face  
 List of points. If several lists are passed, the first list is interpreted as an ${\color{blue}outer}$ ${\color{blue}contour}$ and all further lists are ${\color{green}inner}$ ${\color{green}contours}$.<br>
-[ ${\color{blue}[ [x,y], [x,y], [x,y], [x,y] ]}$ ${\color{green}[ [x,y], [x,y], [x,y], [x,y] ] [ [x,y], [x,y], [x,y], [x,y] ]}$ ]
+[ ${\color{blue}[ [x,y], [x,y], [x,y], [x,y] ]}$, ${\color{green}[ [x,y], [x,y], [x,y], [x,y] ], [ [x,y], [x,y], [x,y], [x,y] ]}$ ]
 
 ## How to cite
 
@@ -199,6 +199,7 @@ List of points. If several lists are passed, the first list is interpreted as an
 	date         = {2023}
 }
 ```
+
 
 
 

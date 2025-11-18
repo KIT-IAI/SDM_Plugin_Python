@@ -1,4 +1,4 @@
-# Pyhon Plugin
+# Python Plugin
 
 The [KITModelViewer](https://github.com/KIT-IAI/SDM_KITModelViewer) Python API is based on the open plugin interface. 
 To be able to create the Python plugin, the [plugin SDK](https://github.com/KIT-IAI/SDM_Plugin_SDK) is required. Simply copy the content of the current SDK version into the "ifcexplorer_python3" folder.
@@ -199,6 +199,7 @@ List of points. If several lists are passed, the first list is interpreted as an
 	date         = {2023}
 }
 ```
+
 
 
 

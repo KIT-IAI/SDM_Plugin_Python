@@ -193,10 +193,10 @@ List of points. If several lists are passed, the first list is interpreted as an
 
 ```bibtex
 @software{SDM_Plugin_Python,
-	title        = {SDM_Plugin_Python},
-	author       = {{Steffen Hempel, Andreas Geiger}},
+	title        = {{SDM\_Plugin\_Python}},
+	author       = {Steffen Hempel, Andreas Geiger},
 	url          = {https://github.com/KIT-IAI/SDM_Plugin_Python},
-	date         = {2023}
+	year         = {2023}
 }
 ```
 

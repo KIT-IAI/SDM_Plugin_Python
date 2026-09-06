@@ -12,7 +12,7 @@ To be able to create the Python plugin, the [plugin SDK](https://github.com/KIT-
 |python3              |vcpkg install python3 triplet=x64-windows   |
 |wxwidgets            |vcpkg install wxwidgets triplet=x64-windows |
 |fmt                  |vcpkg install fmt triplet=x64-windows       |
-
+|geographiclib 	      |vcpkg install geographiclib triplet=x64-windows|
 
 ## Python Interface
 

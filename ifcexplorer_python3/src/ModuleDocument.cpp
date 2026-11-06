@@ -20,7 +20,8 @@ PyObject* loadData(PyObject* self, PyObject* args)
   }
 
   PyObject* objFilename;
-  const auto r = PyArg_ParseTuple(args, "U", &objFilename);
+  PyObject* objMerge;
+  const auto r = PyArg_ParseTuple(args, "UO", &objFilename, &objMerge);
 
   if (r == 0)
   {
@@ -28,9 +29,13 @@ PyObject* loadData(PyObject* self, PyObject* args)
     return nullptr;
   }
 
+  bool merge = PyObject_IsTrue(objMerge);
   std::tstring filename = PyUnicode_AsWideCharString(objFilename, nullptr);
 
-  document->appFeature->loadDocument(filename);
+  if (document->appFeature)
+  {
+    document->appFeature->loadDocument(filename, merge);
+  }
 
   Py_RETURN_NONE;
 }
@@ -582,6 +587,36 @@ PyObject* deleteEntity(PyObject* self, PyObject* args)
 
   document->states->compile();
   document->db->incrementSerialNo();
+
+  Py_RETURN_NONE;
+}
+
+PyObject* getApplicationSettings(PyObject* self, PyObject*)
+{
+  const auto document = reinterpret_cast<Document*>(self);
+
+  if (!document->db)
+  {
+    PyErr_SetString(PyExc_AttributeError, "db");
+
+    Py_RETURN_NONE;
+  }
+
+  if (document->settingsInterface)
+  {
+    const auto& settings = document->settingsInterface->getSettings();
+
+    PyObject* dictObj = PyDict_New();
+
+    PyDict_SetItem(dictObj, PyUnicode_FromString("HardwareThreads"), PyLong_FromSize_t(settings.m_hardwareThreads));
+    PyDict_SetItem(dictObj, PyUnicode_FromString("GoogleGeocodingAPIKey"), PyUnicode_FromString(toUtf8(settings.m_GoogleGeocodingAPIKey).c_str()));
+    PyDict_SetItem(dictObj, PyUnicode_FromString("Google2DTilesAPIKey"), PyUnicode_FromString(toUtf8(settings.m_Google2DTilesAPIKey).c_str()));
+    PyDict_SetItem(dictObj, PyUnicode_FromString("Google3DTilesAPIKey"), PyUnicode_FromString(toUtf8(settings.m_Google3DTilesAPIKey).c_str()));
+    PyDict_SetItem(dictObj, PyUnicode_FromString("OpenStreetMapAPIKey"), PyUnicode_FromString(toUtf8(settings.m_OpenStreetMapAPIKey).c_str()));
+    PyDict_SetItem(dictObj, PyUnicode_FromString("OpenWeatherAPIKey"), PyUnicode_FromString(toUtf8(settings.m_OpenWeatherAPIKey).c_str()));
+
+    return dictObj;
+  }
 
   Py_RETURN_NONE;
 }

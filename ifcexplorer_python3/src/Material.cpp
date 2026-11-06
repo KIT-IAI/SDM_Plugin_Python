@@ -125,9 +125,9 @@ PyObject* processIfcMaterialConstituent(IfcDB::ModelInfo* pModelInfo, IfcDB::Mat
     name = pMaterialConstituent->m_pMaterial->m_MaterialName.c_str();
   }
 
-  (L"Material", name);
-  (L"Fraction", pMaterialConstituent->m_Fraction);
-  (L"Category", pMaterialConstituent->m_Category.c_str());
+  //(L"Material", name);
+  //(L"Fraction", pMaterialConstituent->m_Fraction);
+  //(L"Category", pMaterialConstituent->m_Category.c_str());
 
   Py_RETURN_NONE;
 }
@@ -175,10 +175,10 @@ PyObject* processIfcMaterialDefinition(IfcDB::ModelInfo* pModelInfo, IfcDB::Mate
     PyObject* dictObj = PyDict_New();
     PyDict_SetItem(dictObj, PyUnicode_FromString("Type"), PyUnicode_FromString("MaterialLayerSetUsage"));
 
-    L"MaterialLayerSet", pMaterialLayerSetUsage->m_Name.c_str();
-    L"LayerSetDirection", pMaterialLayerSetUsage->m_LayerSetDirection.c_str();
-    L"DirectionSense", pMaterialLayerSetUsage->m_DirectionSense.c_str();
-    L"OffsetFromReferenceLine", pMaterialLayerSetUsage->m_Offset;
+    //L"MaterialLayerSet", pMaterialLayerSetUsage->m_Name.c_str();
+    //L"LayerSetDirection", pMaterialLayerSetUsage->m_LayerSetDirection.c_str();
+    //L"DirectionSense", pMaterialLayerSetUsage->m_DirectionSense.c_str();
+    //L"OffsetFromReferenceLine", pMaterialLayerSetUsage->m_Offset;
 
     if (pMaterialLayerSetUsage->m_MaterialLayers.empty() == false)
     {
@@ -219,7 +219,7 @@ PyObject* processIfcMaterialDefinition(IfcDB::ModelInfo* pModelInfo, IfcDB::Mate
     PyObject* dictObj = PyDict_New();
     PyDict_SetItem(dictObj, PyUnicode_FromString("Type"), PyUnicode_FromString("MaterialProfileSet"));
 
-    L"MaterialProfileSet", pMaterialProfileSet->m_Name.c_str();
+    //L"MaterialProfileSet", pMaterialProfileSet->m_Name.c_str();
 
     if (pMaterialProfileSet->m_MaterialProfiles.empty() == false)
     {
@@ -242,9 +242,9 @@ PyObject* processIfcMaterialDefinition(IfcDB::ModelInfo* pModelInfo, IfcDB::Mate
     PyObject* dictObj = PyDict_New();
     PyDict_SetItem(dictObj, PyUnicode_FromString("Type"), PyUnicode_FromString("MaterialLayerSetUsage"));
 
-    L"MaterialProfileSetUsage", pMaterialProfileSetUsage->m_Name.c_str();
-    L"CardinalPoint", pMaterialProfileSetUsage->m_CardinalPoint;
-    L"ReferenceExtent", pMaterialProfileSetUsage->m_ReferenceExtent;
+    //L"MaterialProfileSetUsage", pMaterialProfileSetUsage->m_Name.c_str();
+    //L"CardinalPoint", pMaterialProfileSetUsage->m_CardinalPoint;
+    //L"ReferenceExtent", pMaterialProfileSetUsage->m_ReferenceExtent;
 
     if (pMaterialProfileSetUsage->m_MaterialProfiles.empty() == false)
     {

@@ -29,6 +29,7 @@ PluginPython3::PluginPython3()
     catch (const std::exception& e)
     {
         m_errorMessages.emplace_back(e.what());
+        Py_FinalizeEx();
     }
 
     pluginState = interpreter.getPluginState();
@@ -94,13 +95,24 @@ PluginPython3::PluginPython3()
         for (const auto& pythonAction : m_features)
         {
             pythonAction->setLogInterface(logInterface);
-            pythonAction->setAppFeature(&m_appFeature);
         }
 
         for (const auto& action : m_manifestActions)
         {
             action->setLogInterface(logInterface);
-            action->setAppFeature(&m_appFeature);
+        }
+    });
+
+    m_settingsFeature.attach([&](sdm::plugin::SettingsInterface* settingsInterface)
+    {
+        for (const auto& pythonAction : m_features)
+        {
+            pythonAction->setSettingsInterface(settingsInterface);
+        }
+
+        for (const auto& action : m_manifestActions)
+        {
+            action->setSettingsInterface(settingsInterface);
         }
     });
 
@@ -146,6 +158,7 @@ std::vector<sdm::plugin::Feature*> PluginPython3::getFeatures() const
     features.emplace_back(const_cast<sdm::plugin::DocumentObserverImpl*>(&m_documentObserver));
     features.emplace_back(const_cast<sdm::plugin::LiveLogObserver*>(&m_liveLogObserver));
     features.emplace_back(const_cast<sdm::plugin::AppFeatureHelper*>(&m_appFeature));
+    features.emplace_back(const_cast<sdm::plugin::SettingsFeature*>(&m_settingsFeature));
 
     std::transform(m_features.begin(), m_features.end(), std::back_inserter(features), [](const std::unique_ptr<PythonAction>& ptr)
     {

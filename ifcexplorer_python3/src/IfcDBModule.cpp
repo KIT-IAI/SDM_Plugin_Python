@@ -30,6 +30,7 @@ extern PyObject* getLatLonBoundingBox(PyObject* self, void*);
 extern PyObject* getReferencePoint(PyObject* self, void*);
 extern PyObject* getDefaultSRS(PyObject* self, void*);
 extern PyObject* deleteEntity(PyObject* self, PyObject* args);
+extern PyObject* getApplicationSettings(PyObject* self, PyObject*);
 
 /**
  * Entity
@@ -148,6 +149,7 @@ Types initTypes(PyObject* m)
     { "get_reference_point", (PyCFunction)getReferencePoint, METH_VARARGS, "get coordinates of base reference point" },
     { "get_default_srs", (PyCFunction)getDefaultSRS, METH_VARARGS, "get default SRS" },
     { "delete_entity", (PyCFunction)deleteEntity, METH_VARARGS, "delete a entity" },
+    { "get_application_settings", (PyCFunction)getApplicationSettings, METH_VARARGS, "get settings from the host application" },
     { nullptr }
   };
   
@@ -157,8 +159,6 @@ Types initTypes(PyObject* m)
   documentType.tp_itemsize  = 0;
   documentType.tp_flags     = Py_TPFLAGS_DEFAULT;
   documentType.tp_methods   = documentMethods;
-
-  //PyType_Ready(&documentType);
 
   /**
    * Entity
@@ -313,7 +313,7 @@ Types initTypes(PyObject* m)
     { "get_normal", (PyCFunction)faceNormal, METH_NOARGS, "returns the face normal" },
     { "get_polygons", (PyCFunction)faceGetPolygons, METH_NOARGS, "returns the polygons of the face" },
     { "get_outer_loop", (PyCFunction)faceGetOuterLoop, METH_NOARGS, "returns the outer loop as a polyline object" },
-    { "get_outer_loop_coordinates", (PyCFunction)faceGetOuterLoopCoordinates, METH_NOARGS, "Returns a list structure containing the coordinates of the outerr loop" },
+    { "get_outer_loop_coordinates", (PyCFunction)faceGetOuterLoopCoordinates, METH_NOARGS, "Returns a list structure containing the coordinates of the outer loop" },
     { "get_inner_loops", (PyCFunction)faceGetInnerLoops, METH_NOARGS, "returns the inner loops as a list of polyline objects" },
     { "get_inner_loops_coordinates", (PyCFunction)faceGetInnerLoopsCoordinates, METH_NOARGS, "Returns a list structure containing the coordinates of the inner loops" },
     { nullptr }
@@ -352,15 +352,16 @@ Types initTypes(PyObject* m)
   polylineType.tp_getset = polylineMembers;
   polylineType.tp_methods = polylineMethods;
 
-  PyModule_AddType(m, &documentType);
-  PyModule_AddType(m, &entityType);
-  PyModule_AddType(m, &entityTypeType);
-  PyModule_AddType(m, &relationType);
-  PyModule_AddType(m, &geometryType);
-  PyModule_AddType(m, &faceType);
-  PyModule_AddType(m, &polylineType);
-  //PyModule_AddObject(m, "Document", reinterpret_cast<PyObject*>(&documentType));
-  //PyModule_AddObject(m, "Entity", reinterpret_cast<PyObject*>(&entityType));
+  if (PyModule_AddType(m, &documentType)   < 0 ||
+      PyModule_AddType(m, &entityType)     < 0 ||
+      PyModule_AddType(m, &entityTypeType) < 0 ||
+      PyModule_AddType(m, &relationType)   < 0 ||
+      PyModule_AddType(m, &geometryType)   < 0 ||
+      PyModule_AddType(m, &faceType)       < 0 ||
+      PyModule_AddType(m, &polylineType)   < 0)
+  {
+    return {};
+  }
 
   Types types;
   types.document   = &documentType;
@@ -387,6 +388,7 @@ PyObject* getDocument(PyObject* self, PyObject* args)
   document->db = state.db;
   document->states = state.states;
   document->appFeature = state.appFeature;
+  document->settingsInterface = state.settingsInterface;
 
   return (PyObject*)document;
 }

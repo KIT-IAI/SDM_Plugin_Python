@@ -5,6 +5,7 @@
 #include "Population.hpp"
 #include "IfcDBState.hpp"
 #include <AppFeatureHelper.hpp>
+#include <SettingsFeature.h>
 
 namespace
 {
@@ -15,6 +16,7 @@ namespace
     IfcDB::Populationi* db = nullptr;
     IfcDB::utils::PopulationStates* states = nullptr;
     sdm::plugin::AppFeature* appFeature = nullptr;
+    sdm::plugin::SettingsInterface* settingsInterface = nullptr;
   };
 }
 

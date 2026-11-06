@@ -11,8 +11,6 @@
 #include "InterpreterError.hpp"
 #include <string_view>
 
-constexpr std::string_view PythonEmbeddedVersion = "python311.zip";
-
 stdutils::fs::path findScriptsDir()
 {
     auto executableDir = stdutils::findExecutableFileName().parent_path();
@@ -165,16 +163,26 @@ void Interpreter::run()
     }
     else
     {
-        const auto pythonPath = stdutils::findExecutableFileName().parent_path();
-        const auto stdLibraryPath = pythonPath / "plugins" / "ifcexplorer_python3" / PythonEmbeddedVersion;
+        const auto pythonPath = stdutils::findDLLFileName().parent_path();
+        const auto distribPath = pythonPath / "distrib";
 
-        if (!exists(stdLibraryPath))
+        PyConfig config{};
+        PyConfig_InitPythonConfig(&config);
+
+        config.site_import = 0;
+        config.module_search_paths_set = 1;
+
+        const auto appendPath = [&](const std::filesystem::path& path)
         {
-            throw std::runtime_error(std::string{PythonEmbeddedVersion} + " not found");
-        }
+            PyWideStringList_Append(&config.module_search_paths, path.wstring().c_str());
+        };
 
-        Py_SetPath(stdLibraryPath.wstring().c_str());
-        Py_Initialize();
+        appendPath(distribPath / "bin");
+        appendPath(distribPath / "lib");
+
+        Py_InitializeFromConfig(&config);
+
+        PyConfig_Clear(&config);
     }
 
     {

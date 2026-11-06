@@ -1,7 +1,6 @@
 #include <Python.h>
 
 #include "Interpreter.hpp"
-
 #include "PythonAction.hpp"
 
 PythonAction::PythonAction(const std::string& name)
@@ -27,6 +26,7 @@ void PythonAction::execute() const
     try
     {
         m_logInterface->log(sdm::plugin::MessageLevel::Info, "PythonMessage", ">>> Python script: " + getName());
+        m_logInterface->log(sdm::plugin::MessageLevel::Info, "PythonMessage", ">>> Python version: " + std::string(Py_GetVersion()));
 
         Interpreter interpreter(PluginState{{}, getName()}, m_state);
         interpreter.run();

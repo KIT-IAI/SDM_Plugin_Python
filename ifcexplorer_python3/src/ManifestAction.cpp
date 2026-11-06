@@ -17,6 +17,7 @@ void ManifestAction::execute() const
     try
     {
         m_logInterface->log(sdm::plugin::MessageLevel::Info, "PythonMessage", ">>> Python plugin: " + getName());
+        m_logInterface->log(sdm::plugin::MessageLevel::Info, "PythonMessage", ">>> Python version: " + std::string(Py_GetVersion()));
 
         Interpreter interpreter(PluginState{{}, getName()}, m_state);
         interpreter.setVenvDir(m_manifest.manifestDir / "venv");
@@ -39,6 +40,7 @@ void ManifestAction::execute() const
         }
 
         m_logInterface->log(level, "PythonActionExecute", e.what());
+        Py_FinalizeEx();
     }
 
     m_logInterface->log(sdm::plugin::MessageLevel::Info, "PythonMessage", ">>> Python plugin finished");

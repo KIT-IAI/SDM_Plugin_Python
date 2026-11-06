@@ -6,17 +6,18 @@
 #include <AppFeatureHelper.hpp>
 #include <Python.h>
 #include <string>
-#include "ActionFeature.hpp"
+#include <ActionFeature.hpp>
+#include <stdutils/filesystem.hpp>
+#include <SeparatorAction.hpp>
+#include <SettingsFeature.h>
 #include "ModuleDocument.hpp"
 #include "PythonAction.hpp"
 #include "VenvAction.hpp"
 #include "ManifestAction.hpp"
-#include <stdutils/filesystem.hpp>
-#include <SeparatorAction.hpp>
 
 class PluginPython3 : public sdm::plugin::Plugin
 {
-public:
+  public:
     PluginPython3();
     ~PluginPython3() override;
 
@@ -33,12 +34,13 @@ public:
     IfcDB::Populationi* m_db = nullptr;
     IfcDB::utils::PopulationStates* m_pStates = nullptr;
 
-private:
+  private:
     stdutils::fs::path findScriptsDir();
 
     sdm::plugin::DocumentObserverImpl m_documentObserver;
     sdm::plugin::LiveLogObserver m_liveLogObserver;
     sdm::plugin::AppFeatureHelper m_appFeature;
+    sdm::plugin::SettingsFeature m_settingsFeature;
     std::vector<std::unique_ptr<PythonAction>> m_features;
     std::vector<std::string> m_errorMessages;
     sdm::plugin::InitializationState m_initState;

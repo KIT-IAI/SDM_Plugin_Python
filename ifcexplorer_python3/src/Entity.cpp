@@ -867,7 +867,7 @@ PyObject* processIfcStructuralLoads(IfcDB::IfcStructuralLoad* pStructuralLoad)
   {
     if (pConfiguration->getValues().empty() == false)
     {
-      (L"Load Configuration", pConfiguration->getName().c_str());
+      //(L"Load Configuration", pConfiguration->getName().c_str());
 
       for (const auto& pLoad : pConfiguration->getValues())
       {
@@ -884,7 +884,7 @@ PyObject* processIfcStructuralLoads(IfcDB::IfcStructuralLoad* pStructuralLoad)
         std::tstringstream locationStr;
         locationStr << L"[" << location.first << L"], [" << location.second << L"]";
 
-        (L"Loaction", locationStr.str());
+        //(L"Loaction", locationStr.str());
       }
     }
   }
@@ -904,59 +904,59 @@ PyObject* processIfcStructuralLoads(IfcDB::IfcStructuralLoad* pStructuralLoad)
   }
   else if (pLinearForce = dynamic_cast<IfcDB::IfcStructuralLoadLinearForce*>(pStructuralLoad))
   {
-    (L"Load Linear Force", pLinearForce->getName().c_str());
-    (L"LinearForceX", std::to_string(pLinearForce->getLinearForceX()));
-    (L"LinearForceY", std::to_string(pLinearForce->getLinearForceY()));
-    (L"LinearForceZ", std::to_string(pLinearForce->getLinearForceZ()));
-    (L"LinearMomentX", std::to_string(pLinearForce->getLinearMomentX()));
-    (L"LinearMomentY", std::to_string(pLinearForce->getLinearMomentY()));
-    (L"LinearMomentZ", std::to_string(pLinearForce->getLinearMomentZ()));
+    //(L"Load Linear Force", pLinearForce->getName().c_str());
+    //(L"LinearForceX", std::to_string(pLinearForce->getLinearForceX()));
+    //(L"LinearForceY", std::to_string(pLinearForce->getLinearForceY()));
+    //(L"LinearForceZ", std::to_string(pLinearForce->getLinearForceZ()));
+    //(L"LinearMomentX", std::to_string(pLinearForce->getLinearMomentX()));
+    //(L"LinearMomentY", std::to_string(pLinearForce->getLinearMomentY()));
+    //(L"LinearMomentZ", std::to_string(pLinearForce->getLinearMomentZ()));
   }
   else if (pSingleForceWarping = dynamic_cast<IfcDB::IfcStructuralLoadSingleForceWarping*>(pStructuralLoad))
   {
-    (L"Load Single Force Warping", pSingleForceWarping->getName().c_str());
-    (L"ForceX", std::to_string(pSingleForceWarping->getForceX()));
-    (L"ForceY", std::to_string(pSingleForceWarping->getForceY()));
-    (L"ForceZ", std::to_string(pSingleForceWarping->getForceZ()));
-    (L"MomentX", std::to_string(pSingleForceWarping->getMomentX()));
-    (L"MomentY", std::to_string(pSingleForceWarping->getMomentY()));
-    (L"MomentZ", std::to_string(pSingleForceWarping->getMomentZ()));
-    (L"WarpingMoment", std::to_string(pSingleForceWarping->getWarpingMoment()));
+    //(L"Load Single Force Warping", pSingleForceWarping->getName().c_str());
+    //(L"ForceX", std::to_string(pSingleForceWarping->getForceX()));
+    //(L"ForceY", std::to_string(pSingleForceWarping->getForceY()));
+    //(L"ForceZ", std::to_string(pSingleForceWarping->getForceZ()));
+    //(L"MomentX", std::to_string(pSingleForceWarping->getMomentX()));
+    //(L"MomentY", std::to_string(pSingleForceWarping->getMomentY()));
+    //(L"MomentZ", std::to_string(pSingleForceWarping->getMomentZ()));
+    //(L"WarpingMoment", std::to_string(pSingleForceWarping->getWarpingMoment()));
   }
   else if (pPlanarForce = dynamic_cast<IfcDB::IfcStructuralLoadPlanarForce*>(pStructuralLoad))
   {
-    (L"Load Planar Force", pPlanarForce->getName().c_str());
-    (L"PlanarForceX", std::to_string(pPlanarForce->getPlanarForceX()));
-    (L"PlanarForceY", std::to_string(pPlanarForce->getPlanarForceY()));
-    (L"PlanarForceZ", std::to_string(pPlanarForce->getPlanarForceZ()));
+    //(L"Load Planar Force", pPlanarForce->getName().c_str());
+    //(L"PlanarForceX", std::to_string(pPlanarForce->getPlanarForceX()));
+    //(L"PlanarForceY", std::to_string(pPlanarForce->getPlanarForceY()));
+    //(L"PlanarForceZ", std::to_string(pPlanarForce->getPlanarForceZ()));
   }
   else if (pDisplacement = dynamic_cast<IfcDB::IfcStructuralLoadSingleDisplacement*>(pStructuralLoad))
   {
-    (L"Load Single Displacement", pDisplacement->getName().c_str());
-    (L"DisplacementX", std::to_string(pDisplacement->getDisplacementX()));
-    (L"DisplacementY", std::to_string(pDisplacement->getDisplacementY()));
-    (L"DisplacementZ", std::to_string(pDisplacement->getDisplacementZ()));
-    (L"RotationalDisplacementRX", std::to_string(pDisplacement->getRotationalDisplacementRX()));
-    (L"RotationalDisplacementRY", std::to_string(pDisplacement->getRotationalDisplacementRY()));
-    (L"RotationalDisplacementRZ", std::to_string(pDisplacement->getRotationalDisplacementRZ()));
+    //(L"Load Single Displacement", pDisplacement->getName().c_str());
+    //(L"DisplacementX", std::to_string(pDisplacement->getDisplacementX()));
+    //(L"DisplacementY", std::to_string(pDisplacement->getDisplacementY()));
+    //(L"DisplacementZ", std::to_string(pDisplacement->getDisplacementZ()));
+    //(L"RotationalDisplacementRX", std::to_string(pDisplacement->getRotationalDisplacementRX()));
+    //(L"RotationalDisplacementRY", std::to_string(pDisplacement->getRotationalDisplacementRY()));
+    //(L"RotationalDisplacementRZ", std::to_string(pDisplacement->getRotationalDisplacementRZ()));
   }
   else if (pDisplacementDistortion = dynamic_cast<IfcDB::IfcStructuralLoadSingleDisplacementDistortion*>(pStructuralLoad))
   {
-    (L"Load Single Displacement Distortion", pDisplacementDistortion->getName().c_str());
-    (L"DisplacementX", std::to_string(pDisplacementDistortion->getDisplacementX()));
-    (L"DisplacementY", std::to_string(pDisplacementDistortion->getDisplacementY()));
-    (L"DisplacementZ", std::to_string(pDisplacementDistortion->getDisplacementZ()));
-    (L"RotationalDisplacementRX", std::to_string(pDisplacementDistortion->getRotationalDisplacementRX()));
-    (L"RotationalDisplacementRY", std::to_string(pDisplacementDistortion->getRotationalDisplacementRY()));
-    (L"RotationalDisplacementRZ", std::to_string(pDisplacementDistortion->getRotationalDisplacementRZ()));
-    (L"Distortion", std::to_string(pDisplacementDistortion->getDistortion()));
+    //(L"Load Single Displacement Distortion", pDisplacementDistortion->getName().c_str());
+    //(L"DisplacementX", std::to_string(pDisplacementDistortion->getDisplacementX()));
+    //(L"DisplacementY", std::to_string(pDisplacementDistortion->getDisplacementY()));
+    //(L"DisplacementZ", std::to_string(pDisplacementDistortion->getDisplacementZ()));
+    //(L"RotationalDisplacementRX", std::to_string(pDisplacementDistortion->getRotationalDisplacementRX()));
+    //(L"RotationalDisplacementRY", std::to_string(pDisplacementDistortion->getRotationalDisplacementRY()));
+    //(L"RotationalDisplacementRZ", std::to_string(pDisplacementDistortion->getRotationalDisplacementRZ()));
+    //(L"Distortion", std::to_string(pDisplacementDistortion->getDistortion()));
   }
   else if (pTemperature = dynamic_cast<IfcDB::IfcStructuralLoadTemperature*>(pStructuralLoad))
   {
-    (L"Load Temperature", pTemperature->getName().c_str());
-    (L"DeltaT_Constant", std::to_string(pTemperature->getDeltaT_Constant()));
-    (L"DeltaT_Y", std::to_string(pTemperature->getDeltaT_Y()));
-    (L"DeltaT_Z", std::to_string(pTemperature->getDeltaT_Z()));
+    //(L"Load Temperature", pTemperature->getName().c_str());
+    //(L"DeltaT_Constant", std::to_string(pTemperature->getDeltaT_Constant()));
+    //(L"DeltaT_Y", std::to_string(pTemperature->getDeltaT_Y()));
+    //(L"DeltaT_Z", std::to_string(pTemperature->getDeltaT_Z()));
   }
 
   Py_RETURN_NONE;
@@ -1108,132 +1108,132 @@ PyObject* getEntityAttributes(PyIfcdb::Entity* entity, void*)
       PyDict_SetItem(dictObj, PyUnicode_FromString("AppliedLoad"), appliedLoad);
     }
 
-    (L"GlobalOrLocal", pStructuralActivity->getGlobalOrLocal().c_str());
+    //(L"GlobalOrLocal", pStructuralActivity->getGlobalOrLocal().c_str());
   }
   else if (IfcDB::IfcWallExtension* pWallExtension = dynamic_cast<IfcDB::IfcWallExtension*>(pEntityExtension))
   {
-    (L"Wall Extension");
-    (L"Height", std::to_string(pWallExtension->getHeight()));
-    (L"Length", std::to_string(pWallExtension->getLength()));
-    (L"Width", std::to_string(pWallExtension->getWidth()));
+    //(L"Wall Extension");
+    //(L"Height", std::to_string(pWallExtension->getHeight()));
+    //(L"Length", std::to_string(pWallExtension->getLength()));
+    //(L"Width", std::to_string(pWallExtension->getWidth()));
   }
   else if (IfcDB::IfcDoorExtension* pDoorExtension = dynamic_cast<IfcDB::IfcDoorExtension*>(pEntityExtension))
   {
-    (L"OverallHeight", std::to_string(pDoorExtension->getOverallHeight()));
-    (L"OverallWidth", std::to_string(pDoorExtension->getOverallWidth()));
+    //(L"OverallHeight", std::to_string(pDoorExtension->getOverallHeight()));
+    //(L"OverallWidth", std::to_string(pDoorExtension->getOverallWidth()));
   }
   else if (IfcDB::IfcWindowExtension* pWindowExtension = dynamic_cast<IfcDB::IfcWindowExtension*>(pEntityExtension))
   {
-    (L"OverallHeight", std::to_string(pWindowExtension->getOverallHeight()));
-    (L"OverallWidth", std::to_string(pWindowExtension->getOverallWidth()));
+    //(L"OverallHeight", std::to_string(pWindowExtension->getOverallHeight()));
+    //(L"OverallWidth", std::to_string(pWindowExtension->getOverallWidth()));
   }
   else if (IfcDB::IfcTendonExtension* pTendonExtension = dynamic_cast<IfcDB::IfcTendonExtension*>(pEntityExtension))
   {
-    (L"SteelGrade", pTendonExtension->getSteelGrade());
-    (L"PredefinedType", pTendonExtension->getPredefinedType());
-    (L"NominalDiameter", std::to_string(pTendonExtension->getNominalDiameter()));
-    (L"CrossSectionArea", std::to_string(pTendonExtension->getCrossSectionArea()));
-    (L"TensionForce", std::to_string(pTendonExtension->getTensionForce()));
-    (L"PreStress", std::to_string(pTendonExtension->getPreStress()));
-    (L"FrictionCoefficient", std::to_string(pTendonExtension->getFrictionCoefficient()));
-    (L"AnchorageSlip", std::to_string(pTendonExtension->getAnchorageSlip()));
-    (L"MinCurvatureRadius", std::to_string(pTendonExtension->getMinCurvatureRadius()));
+    //(L"SteelGrade", pTendonExtension->getSteelGrade());
+    //(L"PredefinedType", pTendonExtension->getPredefinedType());
+    //(L"NominalDiameter", std::to_string(pTendonExtension->getNominalDiameter()));
+    //(L"CrossSectionArea", std::to_string(pTendonExtension->getCrossSectionArea()));
+    //(L"TensionForce", std::to_string(pTendonExtension->getTensionForce()));
+    //(L"PreStress", std::to_string(pTendonExtension->getPreStress()));
+    //(L"FrictionCoefficient", std::to_string(pTendonExtension->getFrictionCoefficient()));
+    //(L"AnchorageSlip", std::to_string(pTendonExtension->getAnchorageSlip()));
+    //(L"MinCurvatureRadius", std::to_string(pTendonExtension->getMinCurvatureRadius()));
   }
   else if (IfcDB::IfcTendonAnchorExtension* pTendonAnchorExtension = dynamic_cast<IfcDB::IfcTendonAnchorExtension*>(pEntityExtension))
   {
-    (L"SteelGrade", pTendonAnchorExtension->getSteelGrade());
+    //(L"SteelGrade", pTendonAnchorExtension->getSteelGrade());
   }
   else if (IfcDB::IfcReinforcingBarExtension* pReinforcingBarExtension = dynamic_cast<IfcDB::IfcReinforcingBarExtension*>(pEntityExtension))
   {
-    (L"SteelGrade", pReinforcingBarExtension->getSteelGrade());
-    (L"NominalDiameter", std::to_string(pReinforcingBarExtension->getNominalDiameter()));
-    (L"CrossSectionArea", std::to_string(pReinforcingBarExtension->getCrossSectionArea()));
-    (L"BarLength", std::to_string(pReinforcingBarExtension->getBarLength()));
-    (L"BarRole", pReinforcingBarExtension->getBarRole());
-    (L"BarSurface", pReinforcingBarExtension->getBarSurface());
+    //(L"SteelGrade", pReinforcingBarExtension->getSteelGrade());
+    //(L"NominalDiameter", std::to_string(pReinforcingBarExtension->getNominalDiameter()));
+    //(L"CrossSectionArea", std::to_string(pReinforcingBarExtension->getCrossSectionArea()));
+    //(L"BarLength", std::to_string(pReinforcingBarExtension->getBarLength()));
+    //(L"BarRole", pReinforcingBarExtension->getBarRole());
+    //(L"BarSurface", pReinforcingBarExtension->getBarSurface());
   }
   else if (IfcDB::IfcReinforcingMeshExtension* pReinforcingMeshExtension = dynamic_cast<IfcDB::IfcReinforcingMeshExtension*>(pEntityExtension))
   {
-    (L"SteelGrade", pReinforcingMeshExtension->getSteelGrade());
-    (L"MeshLength", std::to_string(pReinforcingMeshExtension->getMeshLength()));
-    (L"MeshWidth", std::to_string(pReinforcingMeshExtension->getMeshWidth()));
-    (L"LongitudinalBarNominalDiameter", std::to_string(pReinforcingMeshExtension->getLongitudinalBarNominalDiameter()));
-    (L"TransverseBarNominalDiameter", std::to_string(pReinforcingMeshExtension->getTransverseBarNominalDiameter()));
-    (L"LongitudinalBarCrossSectionArea", std::to_string(pReinforcingMeshExtension->getLongitudinalBarCrossSectionArea()));
-    (L"TransverseBarCrossSectionArea", std::to_string(pReinforcingMeshExtension->getTransverseBarCrossSectionArea()));
-    (L"LongitudinalBarSpacing", std::to_string(pReinforcingMeshExtension->getLongitudinalBarSpacing()));
-    (L"TransverseBarSpacing", std::to_string(pReinforcingMeshExtension->getTransverseBarSpacing()));
+    //(L"SteelGrade", pReinforcingMeshExtension->getSteelGrade());
+    //(L"MeshLength", std::to_string(pReinforcingMeshExtension->getMeshLength()));
+    //(L"MeshWidth", std::to_string(pReinforcingMeshExtension->getMeshWidth()));
+    //(L"LongitudinalBarNominalDiameter", std::to_string(pReinforcingMeshExtension->getLongitudinalBarNominalDiameter()));
+    //(L"TransverseBarNominalDiameter", std::to_string(pReinforcingMeshExtension->getTransverseBarNominalDiameter()));
+    //(L"LongitudinalBarCrossSectionArea", std::to_string(pReinforcingMeshExtension->getLongitudinalBarCrossSectionArea()));
+    //(L"TransverseBarCrossSectionArea", std::to_string(pReinforcingMeshExtension->getTransverseBarCrossSectionArea()));
+    //(L"LongitudinalBarSpacing", std::to_string(pReinforcingMeshExtension->getLongitudinalBarSpacing()));
+    //(L"TransverseBarSpacing", std::to_string(pReinforcingMeshExtension->getTransverseBarSpacing()));
   }
   else if (IfcDB::IfcWorkPlanExtension* pWorkPlanExtension = dynamic_cast<IfcDB::IfcWorkPlanExtension*>(pEntityExtension))
   {
-    (L"Identification", pWorkPlanExtension->getIdentification());
-    (L"CreationDate", pWorkPlanExtension->getCreationDate());
-    (L"Creators", pWorkPlanExtension->getCreators());
-    (L"Purpose", pWorkPlanExtension->getPurpose());
-    (L"Duration", pWorkPlanExtension->getDuration());
-    (L"TotalFloat", pWorkPlanExtension->getTotalFloat());
-    (L"StartTime", pWorkPlanExtension->getStartTime());
-    (L"FinishTime", pWorkPlanExtension->getFinishTime());
+    //(L"Identification", pWorkPlanExtension->getIdentification());
+    //(L"CreationDate", pWorkPlanExtension->getCreationDate());
+    //(L"Creators", pWorkPlanExtension->getCreators());
+    //(L"Purpose", pWorkPlanExtension->getPurpose());
+    //(L"Duration", pWorkPlanExtension->getDuration());
+    //(L"TotalFloat", pWorkPlanExtension->getTotalFloat());
+    //(L"StartTime", pWorkPlanExtension->getStartTime());
+    //(L"FinishTime", pWorkPlanExtension->getFinishTime());
   }
   else if (IfcDB::IfcTaskExtension* pTaskExtension = dynamic_cast<IfcDB::IfcTaskExtension*>(pEntityExtension))
   {
-    (L"Identification", pTaskExtension->getIdentification());
-    (L"LongDescription", pTaskExtension->getLongDescription());
-    (L"Status", pTaskExtension->getStatus());
-    (L"WorkMethod", pTaskExtension->getWorkMethod());
-    (L"IsMilestone", (pTaskExtension->getIsMilestone() == true) ? L"True" : L"False");
-    (L"Priority", std::to_string(pTaskExtension->getPriority()));
+    //(L"Identification", pTaskExtension->getIdentification());
+    //(L"LongDescription", pTaskExtension->getLongDescription());
+    //(L"Status", pTaskExtension->getStatus());
+    //(L"WorkMethod", pTaskExtension->getWorkMethod());
+    //(L"IsMilestone", (pTaskExtension->getIsMilestone() == true) ? L"True" : L"False");
+    //(L"Priority", std::to_string(pTaskExtension->getPriority()));
 
     IfcDB::IfcTaskExtension::IfcTaskTIme* pTaskTime = pTaskExtension->getTaskTime();
 
     if (pTaskTime != nullptr)
     {
-      (L"TaskTime");
+      //(L"TaskTime");
 
-      (L"Name", pTaskTime->m_Name);
-      (L"DataOrigin", pTaskTime->m_DataOrigin);
-      (L"UserDefinedDataOrigin", pTaskTime->m_UserDefinedDataOrigin);
-      (L"DurationType", pTaskTime->m_DurationType);
-      (L"ScheduleDuration", pTaskTime->m_ScheduleDuration);
-      (L"ScheduleStart", pTaskTime->m_ScheduleStart);
-      (L"ScheduleFinish", pTaskTime->m_ScheduleFinish);
-      (L"EarlyStart", pTaskTime->m_EarlyStart);
-      (L"EarlyFinish", pTaskTime->m_EarlyFinish);
-      (L"LateStart", pTaskTime->m_LateStart);
-      (L"LateFinish", pTaskTime->m_LateFinish);
-      (L"FreeFloat", pTaskTime->m_FreeFloat);
-      (L"TotalFloat", pTaskTime->m_TotalFloat);
-      (L"IsCritical", (pTaskTime->m_IsCritical == true) ? L"True" : L"False");
-      (L"StatusTime", pTaskTime->m_StatusTime);
-      (L"ActualDuration", pTaskTime->m_ActualDuration);
-      (L"ActualStart", pTaskTime->m_ActualStart);
-      (L"ActualFinish", pTaskTime->m_ActualFinish);
-      (L"RemainingTime", pTaskTime->m_RemainingTime);
-      (L"Completion", pTaskTime->m_Completion);
-      (L"Recurrence", pTaskTime->m_Recurrence);
+      //(L"Name", pTaskTime->m_Name);
+      //(L"DataOrigin", pTaskTime->m_DataOrigin);
+      //(L"UserDefinedDataOrigin", pTaskTime->m_UserDefinedDataOrigin);
+      //(L"DurationType", pTaskTime->m_DurationType);
+      //(L"ScheduleDuration", pTaskTime->m_ScheduleDuration);
+      //(L"ScheduleStart", pTaskTime->m_ScheduleStart);
+      //(L"ScheduleFinish", pTaskTime->m_ScheduleFinish);
+      //(L"EarlyStart", pTaskTime->m_EarlyStart);
+      //(L"EarlyFinish", pTaskTime->m_EarlyFinish);
+      //(L"LateStart", pTaskTime->m_LateStart);
+      //(L"LateFinish", pTaskTime->m_LateFinish);
+      //(L"FreeFloat", pTaskTime->m_FreeFloat);
+      //(L"TotalFloat", pTaskTime->m_TotalFloat);
+      //(L"IsCritical", (pTaskTime->m_IsCritical == true) ? L"True" : L"False");
+      //(L"StatusTime", pTaskTime->m_StatusTime);
+      //(L"ActualDuration", pTaskTime->m_ActualDuration);
+      //(L"ActualStart", pTaskTime->m_ActualStart);
+      //(L"ActualFinish", pTaskTime->m_ActualFinish);
+      //(L"RemainingTime", pTaskTime->m_RemainingTime);
+      //(L"Completion", pTaskTime->m_Completion);
+      //(L"Recurrence", pTaskTime->m_Recurrence);
     }
   }
   else if (IfcDB::IfcCostItemExtension* pCostItemExtension = dynamic_cast<IfcDB::IfcCostItemExtension*>(pEntityExtension))
   {
-    (L"Cost Values");
+    //(L"Cost Values");
 
     for (auto pCostValue : pCostItemExtension->getCostValues())
     {
-      (L"CostValue");
+      //(L"CostValue");
 
-      (L"Name", pCostValue->m_Name);
-      (L"Description", pCostValue->m_Description);
-      (L"AppliedValue", pCostValue->m_AppliedValue);
-      (L"UnitBasis", pCostValue->m_UnitBasis);
-      (L"ApplicableDate", pCostValue->m_ApplicableDate);
-      (L"FixedUntilDate", pCostValue->m_FixedUntilDate);
-      (L"Category", pCostValue->m_Category);
-      (L"Condition", pCostValue->m_Condition);
-      (L"ArithmeticOperator", pCostValue->m_ArithmeticOperator);
-      (L"Components", pCostValue->m_Components);
+      //(L"Name", pCostValue->m_Name);
+      //(L"Description", pCostValue->m_Description);
+      //(L"AppliedValue", pCostValue->m_AppliedValue);
+      //(L"UnitBasis", pCostValue->m_UnitBasis);
+      //(L"ApplicableDate", pCostValue->m_ApplicableDate);
+      //(L"FixedUntilDate", pCostValue->m_FixedUntilDate);
+      //(L"Category", pCostValue->m_Category);
+      //(L"Condition", pCostValue->m_Condition);
+      //(L"ArithmeticOperator", pCostValue->m_ArithmeticOperator);
+      //(L"Components", pCostValue->m_Components);
     }
 
-    (L"Cost Quantities");
+    //(L"Cost Quantities");
 
     for (auto pCostQuantity : pCostItemExtension->getCostQuantities())
     {

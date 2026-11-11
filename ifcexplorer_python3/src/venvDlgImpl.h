@@ -32,10 +32,23 @@ class venvDlgImpl : public venvDlg
     virtual void OnCreateProject(wxCommandEvent& event);
     virtual void OnPluginFolderChanged(wxFileDirPickerEvent& event);
     virtual void OnCreateVenv(wxCommandEvent& event);
+    virtual void OnInstallRequirements(wxCommandEvent& event);
+    virtual void OnCreateRequirements(wxCommandEvent& event);
+    virtual void OnInstallPackage(wxCommandEvent& event);
+    virtual void OnDeletePlugin(wxCommandEvent& event);
+    virtual void OnCreateZip(wxCommandEvent& event);
+    virtual void OnZipFileChanged(wxFileDirPickerEvent& event);
+    virtual void OnInstallPlugin(wxCommandEvent& event);
 
+    bool execute(const std::string& command, wxTextCtrl* = nullptr);
     bool findDefaultDistribution();
     bool checkDistribution(const std::filesystem::path& distribPath);
     bool createProject(const std::filesystem::path& pluginPath);
     bool createVenv(const std::filesystem::path& pluginPath, const std::filesystem::path& distribPath);
-    bool installPlugin(const std::filesystem::path& archivePath, const std::filesystem::path& distribPath);
+    bool installRequirements(const std::filesystem::path& pluginPath);
+    bool createRequirements(const std::filesystem::path& pluginPath);
+    bool installPackage(const std::filesystem::path& pluginPath, const std::wstring& package);
+    bool validPluginZip(const std::filesystem::path& zipPath, bool& hasRequirements);
+    bool installPlugin(const std::filesystem::path& zipPath);
+    bool createPluginZip(const std::filesystem::path& sourceDir, const std::filesystem::path& zipPath);
 };

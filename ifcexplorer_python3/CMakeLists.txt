@@ -15,7 +15,8 @@ endif()
 
 # build plugin
 find_package(wxWidgets CONFIG REQUIRED)
-find_package(Python3 COMPONENTS Development Interpreter REQUIRED)
+find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
+find_package(zip CONFIG REQUIRED)
 
 add_library(ifcexplorer_python3 SHARED
         src/PluginPython3.cpp
@@ -73,7 +74,7 @@ target_include_directories(ifcexplorer_python3 PRIVATE ${CMAKE_SOURCE_DIR}/inclu
 target_link_directories(ifcexplorer_python3 PRIVATE ${CMAKE_SOURCE_DIR}/lib)
 
 target_link_libraries(ifcexplorer_python3 PRIVATE Python3::Python)
-target_link_libraries(ifcexplorer_python3 PRIVATE wx::core wx::base)
+target_link_libraries(ifcexplorer_python3 PRIVATE wx::core wx::base zip::zip)
 target_compile_features(ifcexplorer_python3 PRIVATE cxx_std_17)
 add_dependencies(ifcexplorer_python3 ifcexplorer_python3_scripts)
 

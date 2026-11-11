@@ -17,14 +17,15 @@
 #include <wx/colour.h>
 #include <wx/settings.h>
 #include <wx/filepicker.h>
+#include <wx/textctrl.h>
 #include <wx/sizer.h>
 #include <wx/statline.h>
-#include <wx/textctrl.h>
 #include <wx/button.h>
 #include <wx/bitmap.h>
 #include <wx/image.h>
 #include <wx/icon.h>
 #include <wx/collpane.h>
+#include <wx/checkbox.h>
 #include <wx/dialog.h>
 
 ///////////////////////////////////////////////////////////////////////////
@@ -39,6 +40,8 @@ class venvDlg : public wxDialog
 	protected:
 		wxStaticText* m_staticText5;
 		wxDirPickerCtrl* m_dirPickerDistribution;
+		wxStaticText* m_staticText7;
+		wxTextCtrl* m_textPythonVersion;
 		wxStaticLine* m_staticline1;
 		wxCollapsiblePane* m_collapsiblePane1;
 		wxStaticText* m_staticText2;
@@ -50,11 +53,26 @@ class venvDlg : public wxDialog
 		wxStaticText* m_staticScript;
 		wxTextCtrl* m_textCtrlScript;
 		wxButton* m_buttonCreatePlugin;
+		wxStaticLine* m_staticline2;
 		wxCollapsiblePane* m_collapsiblePane2;
 		wxStaticText* m_staticText6;
 		wxDirPickerCtrl* m_dirPickerPlugin;
 		wxButton* m_buttonCreateVenv;
-		wxStaticLine* m_staticline2;
+		wxButton* m_buttonInstallRequirements;
+		wxButton* m_buttonCreateRequirements;
+		wxButton* m_buttonInstallPackage;
+		wxTextCtrl* m_textPackage;
+		wxButton* m_buttonCreateZip;
+		wxButton* m_buttonDeletePlugin;
+		wxStaticLine* m_staticline3;
+		wxCollapsiblePane* m_collapsiblePane3;
+		wxStaticText* m_staticText9;
+		wxFilePickerCtrl* m_filePickerPythonArchive;
+		wxCheckBox* m_checkBoxValidZip;
+		wxCheckBox* m_checkBoxCreateVenv;
+		wxCheckBox* m_checkBoxInstallRequirements;
+		wxButton* m_buttonInstallPlugin;
+		wxStaticLine* m_staticline4;
 		wxTextCtrl* m_textCtrlLog;
 
 		// Virtual event handlers, override them in your derived class
@@ -63,6 +81,13 @@ class venvDlg : public wxDialog
 		virtual void OnCreateProject( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnPluginFolderChanged( wxFileDirPickerEvent& event ) { event.Skip(); }
 		virtual void OnCreateVenv( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnInstallRequirements( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnCreateRequirements( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnInstallPackage( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnCreateZip( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnDeletePlugin( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnZipFileChanged( wxFileDirPickerEvent& event ) { event.Skip(); }
+		virtual void OnInstallPlugin( wxCommandEvent& event ) { event.Skip(); }
 
 
 	public:

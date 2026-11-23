@@ -91,8 +91,13 @@ plugin.register("Get entity info of visible entities", "", ifcdb_query.query_vis
 |get_geometry_info()                    |Returns the geometry structure assigned to the object |
 |get_geometry()                         |Returns the related geometry objects |
 |calc_quantities()                      |Calculates geometric parameters like volume, center of gravity, extension, ... and provides them in a dictionary |
-|add_string_attribute(name, value)      |Add new string attribute |
+|add_string_attribute(name, value)      |Add new string attribute   |
 |add_date_attribute(name, year, month, day) |Add new data attribute |
+|add_integer_attribute(name, value)     |Add new integer attribute  |
+|add_double_attribute(name, value)      |Add new double attribute   |
+|set_string_attribute(name, value)      |Set value for existing string attribute |
+|set_integer_attribute(name, value)     |Set value for existing double attribute |
+|set_double_attribute(name, value)      |Set value for existing double attribute |
 |add_geometry_polyline(coordinates)     |A polyline is generated from a passed list of coordinate values (see [Geometry Structures](#geometry-structures) below) |
 |add_geometry_polygon(coordinates)      |A polygon (face) is generated from a passed list of coordinate values (see [Geometry Structures](#geometry-structures) below)|
 |is_point_within(coordinates)           |Checks whether a point is located within the projected geometry (see [point definition](#geometry-structures) below) |

@@ -55,6 +55,10 @@ plugin.register("Get entity info of visible entities", "", ifcdb_query.query_vis
 
 ### Observer:
 
+|Type.                  |Description                       |
+|:---                   |:---                              |
+|select_entity          |Receive selections from 3d window |
+
 ### Entity: Attributes
 
 |Attribute              |Description                    |Type     |

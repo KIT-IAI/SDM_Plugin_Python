@@ -51,13 +51,13 @@ plugin.register("Get entity info of visible entities", "", ifcdb_query.query_vis
 |get_file_path()                        |Returns the path to the currently loaded file |
 |get_latlon_boundingbox()               |Returns the model bounding box in latitude / longitude (see [point definition](#geometry-structures))|
 |get_reference_point()               	|Returns the coordinates of the model reference point according to the EPSG of the default SRS (see [point definition](#geometry-structures))|
-|get_default_srs()               	|Returns the EPSG code of the default SRS|
+|get_default_srs()                      |Returns the EPSG code of the default SRS|
 
 ### Observer:
 
-|Type.                  |Description                       |
-|:---                   |:---                              |
-|select_entity          |Receive selections from 3d window |
+|Type.                        |Description                       |
+|:---                         |:---                              |
+|select_entity(oid, selected) |Receive selections from 3d window |
 
 ### Entity: Attributes
 

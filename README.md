@@ -52,6 +52,7 @@ plugin.register("Get entity info of visible entities", "", ifcdb_query.query_vis
 |get_latlon_boundingbox()               |Returns the model bounding box in latitude / longitude (see [point definition](#geometry-structures))|
 |get_reference_point()               	|Returns the coordinates of the model reference point according to the EPSG of the default SRS (see [point definition](#geometry-structures))|
 |get_default_srs()                      |Returns the EPSG code of the default SRS|
+|get_parent_window()                    |Returns the handle of the applications main window |
 
 ### Observer:
 
@@ -92,7 +93,7 @@ plugin.register("Get entity info of visible entities", "", ifcdb_query.query_vis
 |get_geometry()                         |Returns the related geometry objects |
 |calc_quantities()                      |Calculates geometric parameters like volume, center of gravity, extension, ... and provides them in a dictionary |
 |add_string_attribute(name, value)      |Add new string attribute   |
-|add_date_attribute(name, year, month, day) |Add new data attribute |
+|add_date_attribute(name, year, month, day) |Add new date attribute |
 |add_integer_attribute(name, value)     |Add new integer attribute  |
 |add_double_attribute(name, value)      |Add new double attribute   |
 |set_string_attribute(name, value)      |Set value for existing string attribute |

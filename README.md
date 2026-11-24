@@ -53,6 +53,8 @@ plugin.register("Get entity info of visible entities", "", ifcdb_query.query_vis
 |get_reference_point()               	|Returns the coordinates of the model reference point according to the EPSG of the default SRS (see [point definition](#geometry-structures))|
 |get_default_srs()                      |Returns the EPSG code of the default SRS|
 |get_parent_window()                    |Returns the handle of the applications main window |
+|register_population_observer()         |Registers the observer		|
+|unregister_population_observer()       |Removes the observer		|
 
 ### Observer:
 
